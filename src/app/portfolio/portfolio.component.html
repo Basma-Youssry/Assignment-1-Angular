@@ -1,0 +1,43 @@
+<section class="potrfolio">
+    <div class="caption-head">
+        <h1 class="fw-bold text-center">
+            PORTFOLIO COMPONENT
+        </h1>
+        <div class="under-line d-flex justify-content-center align-items-center my-3">
+            <div class="line me-3"></div>
+            <i class="fa-solid fa-star"></i>
+            <div class="line ms-3"></div>
+        </div>
+    </div>  
+    <div class="container">
+        <!-- <div class="row">
+            <div class="col-md-4 pb-5" *ngFor="let portfolioImg of  portfolioImgs">
+                <div class="layer-img-container position-relative" (click)="toggleLayer(img)">
+                    <img [src]="portfolioImg.src" [alt]="portfolioImg.alt" class="w-100 rounded-3">
+                    <div class="layer position-absolute top-0 bottom-0 w-100 rounded-3 d-flex justify-content-center align-items-center" >
+                        <i class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="col-md-4 pb-5" *ngFor="let portfolioImg of portfolioImgs">
+                <div class="layer-img-container position-relative"(click)="toggleLayer(portfolioImg.src)">
+                    <img [src]="portfolioImg.src" [alt]="portfolioImg.alt" class="w-100 rounded-3">
+                    <div class="layer position-absolute top-0 bottom-0 w-100 rounded-3 d-flex justify-content-center align-items-center" >
+                        <i class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                </div>
+                <div class="portfolio-layer" 
+                     [ngClass]="{ 'visible': selectedImage === portfolioImg.src, 'visually-hidden': selectedImage !== portfolioImg.src }"
+                     (click)="closeLayer($event)"
+                    >
+                    <div class="layer-img">
+                        <img [src]="portfolioImg.src" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</section>
+

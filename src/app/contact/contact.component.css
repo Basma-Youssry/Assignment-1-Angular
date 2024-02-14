@@ -1,0 +1,32 @@
+.contact{
+    margin-top: 150px;
+}
+.caption-head h1{
+    color: #2C3E50;
+}
+.under-line .line{
+    background-color: #2C3E50;
+    width: 80px;
+    height: 4px;
+}
+.under-line i {
+    color: #2C3E50;
+}
+form{
+    color: #212529;
+
+}
+
+.form-control:focus{
+    box-shadow: 0 0 0  !important;
+}
+label{
+    position: relative;
+    top: 20px;
+    color: #1ABC9C;
+    transition: top 0.9s ease;
+}
+form button{
+    background-color: #1ABC9C;
+    color: white;
+}
